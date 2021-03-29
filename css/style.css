@@ -62,7 +62,9 @@ section{
 .heading span{
     color: var(--yellow);
 }
-
+.border{
+    border:  2px solid red;
+}
 
 header{
     position: fixed;
@@ -216,7 +218,6 @@ header #menubar{
 }
 .menu .row .image img{
     width: 100%;
-    height: auto;
     object-fit: cover;
     border-radius: 1rem;
 }
@@ -457,9 +458,10 @@ footer .credit a{
         width: 100%;
         background-color: var(--yellow);
         border-top: .2rem solid rgba(0,0,0,.1);
-        transform: translateY(0);
+        transform: translateY(-130%);
         transform-origin: top;
-        opacity: 0;
+        transition: .5s ease-in-out;
+        /* opacity: 0; */
     }
     header .navbar ul{
         flex-flow: column;
@@ -483,8 +485,8 @@ footer .credit a{
         transform: rotate(180deg);
     }
     header .navbar.nav-toggle{
-        transform: translateY(1);
-        opacity: 1;
+        transform: translateY(0%);
+        /* opacity: 1; */
     }
    
     .home .content h3{
